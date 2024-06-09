@@ -1,0 +1,130 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+:root{
+	--Purple: 	#854dff;
+	--Light-red: 	#ff5757;
+	--White: #ffffff;
+	--Off-white: 	#f0f0f0;
+	--Light-grey: #dbdbdb;
+	--Smokey-grey: 	#716f6f;
+	--Off-black: 	#141414;
+
+}
+
+
+/* regular */
+@font-face {
+	font-family: regularFont;
+	src: url("./assets/fonts/Poppins-Regular.ttf");
+}
+
+/* italic */
+@font-face {
+	font-family: italicFont;
+	src: url("./assets/fonts/Poppins-Italic.ttf");
+}
+
+/* bold */
+@font-face {
+	font-family: boldFont;
+	src: url("./assets/fonts/Poppins-Bold.ttf");
+}
+
+/* boldItalic */
+@font-face {
+	font-family: boldItalicFont;
+	src: url("./assets/fonts/Poppins-BoldItalic.ttf");
+}
+
+/* extraBold */
+@font-face {
+	font-family: extraboldFont;
+	src: url("./assets/fonts/Poppins-ExtraBold.ttf");
+}
+
+/* extra boldItalic */
+@font-face {
+	font-family: extraBoldItalicFont;
+	src: url("./assets/fonts/Poppins-ExtraBoldItalic.ttf");
+}
+
+
+html body {
+	background-color: var(--Off-white);
+}
+
+.wrap{
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.calendar{
+	background-color: var(--White);
+	padding: 3rem;
+	padding-right: 9rem;
+	border-radius: 15px 15px 80px 15px;
+}
+
+.date{
+	display: flex;
+	gap: 2rem;
+	border-style: solid;
+	border-width: 1px;
+	border-color: transparent transparent var(--Light-grey) transparent;
+	width: 100%;
+	height: 6rem;
+	padding-right: 4rem;
+	margin-bottom: 3rem;
+}
+
+.date-item{
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+}
+
+label{
+	color: var(--Off-black);
+	font-size: .6rem;
+	letter-spacing: 1px;
+	font-family: regularFont;
+}
+
+input{
+	font-family: BoldFont;
+	width: 6rem;
+	height: 2.5rem;
+	outline: none;
+	font-size: 1.2rem;
+	padding-left: 1rem;
+	border: 1px solid var(--Light-grey);
+	border-radius: 5px;
+}
+
+button{
+	/* position: relative; */
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: none;
+	background-color: var(--Purple);
+	color: var(--White);
+	top: 100%;
+	left: 100%;
+}
+
+h1{
+	font-size: 3rem;
+	font-family: extraBoldItalicFont;
+}
+
+span{
+	color: var(--Purple);
+}

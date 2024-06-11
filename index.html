@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	  <script src="https://kit.fontawesome.com/d093e898b3.js" crossorigin="anonymous"></script>
+	  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+	  <link rel="stylesheet" href="./style.css">
+	  <title>Frontend Mentor | Age calculator app</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="./style.css">
-  <title>Frontend Mentor | Age calculator app</title>
+	  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+	  <style>
+		.attribution { font-size: 11px; text-align: center; }
+		.attribution a { color: hsl(228, 45%, 44%); }
+	  </style>
+	</head>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-	.attribution { font-size: 11px; text-align: center; }
-	.attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
+	<body>
+		<div class="wrap">
 
-<body>
-	<div class="wrap">
+			<div class="calendar">
 
-		<div class="calendar">
-			<div class="date">
-				<div class="date-item">
+				<div class="input-info">
+						<div class="date">
 
-					<label for="day"> DAY</label> 
-					<input type="number" placeholder="DD" maxlength="2">
+							<div class="date-item">
+								<label for="day"> DAY</label> 
+								<input  id="day"  type="text" pattern="\d*"  placeholder="DD" maxlength="2">
+								<p class="empty-field">This field is requierd</p>
+								<p class="invalid-date">Must be a valid data</p>
+							</div>
+
+							<div class="date-item">
+								<label for="day"> MONTH</label> 
+								<input id="month" type="text" pattern="\d*" placeholder="MM" maxlength="2">
+								<p class="empty-field">This field is requierd</p>
+								<p class="invalid-date">Must be a valid data</p>
+							</div>
+						
+							<div class="date-item">
+								<label for="day"> YEAR</label> 
+								<input id="year" placeholder="YYYY" type="text" pattern="\d*" maxlength="4">
+								<p class="empty-field">This field is requierd</p>
+								<p class="invalid-date">Must be a valid data</p>
+							</div>
+						</div>
 				</div>
-					
-				<div class="date-item">
 
-					<label for="day"> MONTH</label> 
-					<input type="number" placeholder="MM" maxlength="2">
-				</div>
-				
-				<div class="date-item">
+						<div class="submit">
+						<button id="calculate-btn"><i class="fa-solid fa-arrow-down"></i></button>
+						</div>
 
-					<label for="day"> YEAR</label> 
-					<input type="number" placeholder="YYYY" maxlength="4">
-				</div>
-				<button>.</button>
+
+						<h1><span id="years">- -</span> years</h1>
+						<h1><span id="months">- - </span> months</h1>
+						<h1><span id="days">- -</span> days</h1>
+						</div>
+						
+						<div class="attribution">
+							Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+							Coded by <a href="#">Hajar OUASLAM</a>.
+						</div>
 			</div>
-			
-			
-			<h1><span id="year">- -</span> years</h1>
-			<h1><span id="month">- - </span> months</h1>
-			<h1><span id="days">- -</span> days</h1>
-			
-		</div>
-			<div class="attribution">
-				Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-				Coded by <a href="#">Hajar OUASLAM</a>.
-			</div>
-  </div>
-</body>
+	  	<script src="./main.js"></script>
+	</body>
 </html>

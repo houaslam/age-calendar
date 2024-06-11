@@ -68,8 +68,14 @@ html body {
 .calendar{
 	background-color: var(--White);
 	padding: 3rem;
-	padding-right: 9rem;
+	/* padding-right: 9rem; */
 	border-radius: 15px 15px 80px 15px;
+}
+
+.input-info{
+	display: flex;
+	margin-bottom: 2rem;
+	/* border: 2px solid green; */
 }
 
 .date{
@@ -78,10 +84,12 @@ html body {
 	border-style: solid;
 	border-width: 1px;
 	border-color: transparent transparent var(--Light-grey) transparent;
-	width: 100%;
+	/* width: 100%; */
+	width: 450px;
 	height: 6rem;
-	padding-right: 4rem;
-	margin-bottom: 3rem;
+	/* padding-right: 4rem; */
+	padding-bottom: 1rem;
+	/* border: 2px solid blue; */
 }
 
 .date-item{
@@ -99,26 +107,45 @@ label{
 
 input{
 	font-family: BoldFont;
-	width: 6rem;
-	height: 2.5rem;
 	outline: none;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 	padding-left: 1rem;
 	border: 1px solid var(--Light-grey);
+	width: 6rem;
+	padding-block: .4rem;
+	/* height: 4rem; */
 	border-radius: 5px;
 }
 
-button{
-	/* position: relative; */
-	width: 50px;
-	height: 50px;
+input:focus{
+	border: 1px solid var(--Purple);
+}
+
+.submit{
+	position: relative;
+}
+
+#calculate-btn{
+	position: relative;
+	width: 70px;
+	height: 70px;
 	border-radius: 50%;
 	border: none;
 	background-color: var(--Purple);
 	color: var(--White);
-	top: 100%;
-	left: 100%;
+	top: 65%;
+	/* left: 15%; */
 }
+
+#calculate-btn:hover{
+	background-color: var(--Off-black);
+	cursor: pointer;
+}
+
+i{
+	font-size: 34px;
+}
+
 
 h1{
 	font-size: 3rem;
@@ -127,4 +154,20 @@ h1{
 
 span{
 	color: var(--Purple);
+}
+
+.empty-field{
+	font-family: ItalicFont;
+	font-size: .7rem;
+	color: var(--Light-red);
+	margin-bottom: 1rem;
+	display: none;
+}
+
+.invalid-date{
+	font-family: ItalicFont;
+	font-size: .7rem;
+	color: var(--Light-red);
+	margin-bottom: 1rem;
+	display: none;
 }

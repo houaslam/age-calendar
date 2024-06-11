@@ -12,7 +12,6 @@ submitBtn.addEventListener( "click", (  )=>{
 
 
 	clearDisplay( [day, month, year]);
-	console.log(day.value);
 	isvalid = check_empty(  day, month, year );
 	if (isvalid)
 		isvalid = check_value(  day, month, year );
@@ -45,13 +44,15 @@ function check_value(day, month, year){
 }
 
 function check_date(day, month, year){
-	let date = new Date(`${day}-${month}-${year}`);
-	let res = date.getFullYear() === year.value && date.getMonth() === month.value + 1 && date.getDate() === day.value;
+	let date = new Date(`${month.value}/${day.value}/${year.value}`);
+
+	let res = date.getFullYear() === parseInt(year.value) && date.getMonth() + 1 === parseInt(month.value) && date.getDate() === parseInt(day.value);
 	if (!res){
-		display_error(day, 1, 0);
+		display_error(day, 2, 0);
 		display_error(month, 0, 1);
 		return display_error(year, 0, 2);
 	}
+	return true;
 }
 
 
@@ -67,10 +68,10 @@ function display_date( day, month, year ){
 		day_v += previousMonth;
 		}
 		
-		if ( month_v < 0 ) {
+	if ( month_v < 0 ) {
 			year_v--;
 			month_v += 12;
-			}
+		}
 		document.getElementById( "years" ).innerText = year_v;
 		document.getElementById( "months" ).innerText = month_v;
 		document.getElementById( "days" ).innerText = day_v;
